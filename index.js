@@ -27,7 +27,7 @@ function client(url, user, password) {
     this.login = () => {
         return new Promise((resolve, reject) => {
             this.call("user.login", {
-                user: this.user,
+                username: this.user,
                 password: this.password
             }).then((body) => {
                 this.auth = body.result;
